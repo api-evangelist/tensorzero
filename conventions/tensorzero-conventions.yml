@@ -1,0 +1,58 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/tensorzero/tensorzero/tree/main/docs
+notes: >-
+  Cross-cutting request/response semantics for the TensorZero Gateway, captured
+  from the README + docs (the project is now unmaintained; no OpenAPI spec is
+  published to derive from). The gateway is self-hosted (single Docker
+  container) and exposes both a native inference API and an OpenAI-compatible
+  surface.
+api_surface:
+  base_url_pattern: http://<gateway-host>:3000
+  openai_compatible_path: /openai/v1
+  native_endpoints:
+    - POST /inference        # native structured inference (functions, variants)
+    - POST /inference (stream)  # SSE streaming
+    - POST /feedback         # attach metrics / human feedback to an inference
+  model_addressing: >-
+    Models are addressed by string, e.g.
+    tensorzero::model_name::anthropic::claude-sonnet-4-6, or by TensorZero
+    function name.
+authentication:
+  style: optional bearer token (see authentication/tensorzero-authentication.yml)
+  default: no auth (network-trusted); operators can enable client auth.
+idempotency:
+  supported: false
+  note: >-
+    No documented Idempotency-Key contract. The gateway does offer content-based
+    inference caching (cache identical inference requests) and configurable
+    retries/fallbacks, but these are not an idempotency-key mechanism.
+caching:
+  supported: true
+  kind: inference caching (content-addressed)
+  docs: https://www.tensorzero.com/docs/gateway/guides/inference-caching
+rate_limiting:
+  supported: true
+  kind: custom operator-enforced limits with granular scopes (e.g. tags)
+  docs: https://www.tensorzero.com/docs/operations/enforce-custom-rate-limits
+usage_metering:
+  supported: true
+  tracks: [usage, cost]
+  docs: https://www.tensorzero.com/docs/operations/track-usage-and-cost
+reliability:
+  routing: true
+  retries: true
+  fallbacks: true
+  load_balancing: true
+  timeouts: granular
+  docs: https://www.tensorzero.com/docs/gateway/guides/retries-fallbacks
+streaming:
+  supported: true
+  transport: server-sent events (SSE)
+observability:
+  stores: inferences + feedback in your database (ClickHouse), queryable via API or UI
+error_envelope:
+  note: OpenAI-compatible error shape on the /openai/v1 surface.
+cross_reference:
+  authentication: authentication/tensorzero-authentication.yml
+  lifecycle: lifecycle/tensorzero-lifecycle.yml

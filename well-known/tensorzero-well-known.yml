@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+host: https://www.tensorzero.com
+notes: >-
+  Probed the standard /.well-known/ discovery surface on the TensorZero website.
+  None are published (the hosted product has wound down and the gateway is
+  self-hosted, so there is no provider-operated discovery surface). Absence is a
+  valid, recorded result.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

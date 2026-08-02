@@ -1,9 +1,33 @@
 aid: tensorzero
 name: TensorZero
-description: 'TensorZero is a company surfaced as a portfolio company of bessemer-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. Sector: ai-ml. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  TensorZero is an open-source, self-hosted LLMOps platform that unifies five
+  capabilities behind one stack: a high-performance LLM Gateway that accesses
+  every major model provider (Anthropic, OpenAI, AWS Bedrock/SageMaker, Azure,
+  GCP Vertex, Mistral, Groq, xAI and more) through a single OpenAI-compatible
+  API with sub-millisecond p99 overhead; Observability that stores inferences
+  and feedback in your own database; Evaluation via heuristics and LLM judges;
+  Optimization of prompts, models, and inference strategies from metrics and
+  human feedback; and Experimentation with built-in A/B testing, routing,
+  retries, and fallbacks. Written in Rust and deployed as a single Docker
+  container, it plays nicely with the OpenAI SDK and OpenTelemetry. NOTE: as of
+  2026 TensorZero is no longer maintained — the source remains available on
+  GitHub (all org repositories archived) and the final Python client (2026.6.0)
+  is on PyPI, but the hosted product has wound down.
 url: https://raw.githubusercontent.com/api-evangelist/tensorzero/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/tensorzero.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,10 +36,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai Ml
+- LLM
+- LLMOps
+- AI Gateway
+- Inference
+- Observability
+- Open Source
+- Model Routing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +56,46 @@ maintainers:
 common:
 - type: Website
   url: https://www.tensorzero.com/
+- type: Documentation
+  url: https://github.com/tensorzero/tensorzero/tree/main/docs
+- type: APIReference
+  url: https://www.tensorzero.com/docs/gateway/api-reference
+- type: GettingStarted
+  url: https://www.tensorzero.com/docs/quickstart
+- type: Blog
+  url: https://www.tensorzero.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/tensorzero
+- type: Support
+  url: https://www.tensorzero.com/slack
+- type: TermsOfService
+  url: https://www.tensorzero.com/terms/
+- type: PrivacyPolicy
+  url: https://www.tensorzero.com/privacy/
+- type: ChangeLog
+  url: https://github.com/tensorzero/tensorzero/releases
+- type: Packages
+  url: packages/tensorzero-packages.yml
+- type: SDKs
+  url: packages/tensorzero-packages.yml
+- type: Authentication
+  url: authentication/tensorzero-authentication.yml
+- type: Conventions
+  url: conventions/tensorzero-conventions.yml
+- type: Conformance
+  url: conformance/tensorzero-conformance.yml
+- type: Lifecycle
+  url: lifecycle/tensorzero-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/tensorzero-lifecycle.yml
+- type: WellKnown
+  url: well-known/tensorzero-well-known.yml
+- type: DomainSecurity
+  url: security/tensorzero-domain-security.yml
+- type: LLMsTxt
+  url: llms/tensorzero-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v1

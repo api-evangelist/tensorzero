@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.tensorzero.com/
+notes: >-
+  TensorZero has been wound down. As of this pass the website (www.tensorzero.com)
+  displays only: "TensorZero remains available on GitHub but is no longer
+  maintained." Every repository in the tensorzero GitHub org is archived
+  (read-only), including the flagship tensorzero/tensorzero platform. The docs
+  site (/docs and all /docs/* paths, including the gateway API reference) now
+  301-redirects to the repository's markdown docs folder on GitHub. The project
+  is therefore end-of-life / unmaintained, though the source and the last
+  published Python client (tensorzero 2026.6.0) remain available.
+status: unmaintained
+end_of_life: true
+versioning:
+  scheme: calendar
+  current: '2026.6.0'
+  source: https://pypi.org/project/tensorzero/
+deprecation:
+  deprecated: true
+  reason: Project no longer maintained; hosted product wound down.
+  notice_url: https://www.tensorzero.com/
+  archived_repos: true
+  sunset_header: false
+status_page: null
+sla: null
+docs_moved_to: https://github.com/tensorzero/tensorzero/tree/main/docs
+release_notes: https://github.com/tensorzero/tensorzero/releases

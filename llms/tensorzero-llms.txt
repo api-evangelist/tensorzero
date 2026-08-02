@@ -1,0 +1,27 @@
+# TensorZero
+
+> TensorZero is an open-source, self-hosted LLMOps platform that unifies an LLM Gateway (access every major model provider through one unified, OpenAI-compatible API with <1ms p99 overhead), Observability (store inferences and feedback in your own database), Evaluation (heuristics and LLM judges), Optimization (improve prompts, models, and inference strategies from metrics and human feedback), and Experimentation (A/B testing, routing, fallbacks, retries). NOTE: as of 2026 the project is no longer maintained — the source remains available on GitHub and the last Python client (2026.6.0) is on PyPI, but the hosted product has wound down and all org repositories are archived.
+
+## Core
+- [Website](https://www.tensorzero.com/): Landing page (project now unmaintained)
+- [GitHub repository](https://github.com/tensorzero/tensorzero): Source and markdown docs (archived / read-only)
+- [Documentation](https://github.com/tensorzero/tensorzero/tree/main/docs): Docs now redirected here from tensorzero.com/docs
+- [Blog](https://www.tensorzero.com/blog/): Engineering and product posts
+- [Release notes](https://github.com/tensorzero/tensorzero/releases): Version history
+
+## API
+- [Gateway API reference (historical)](https://www.tensorzero.com/docs/gateway/api-reference): Native /inference and /feedback endpoints plus OpenAI-compatible /openai/v1
+- [Quickstart (historical)](https://www.tensorzero.com/docs/quickstart): 5-minute getting started
+- [Configuration reference (historical)](https://www.tensorzero.com/docs/gateway/configuration-reference): Gateway configuration
+
+## Packages
+- [Python client (PyPI)](https://pypi.org/project/tensorzero/): pip install tensorzero (official)
+
+## Community
+- [Slack](https://www.tensorzero.com/slack)
+- [Discord](https://www.tensorzero.com/discord)
+- [Twitter / X](https://www.x.com/tensorzero)
+
+## Legal
+- [Terms of Use](https://www.tensorzero.com/terms/)
+- [Privacy Policy](https://www.tensorzero.com/privacy/)

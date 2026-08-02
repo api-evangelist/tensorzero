@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/tensorzero/tensorzero/tree/main/docs
+docs: https://www.tensorzero.com/docs/operations/set-up-auth-for-tensorzero
+notes: >-
+  TensorZero is a self-hosted gateway; there is no provider-hosted OpenAPI spec
+  to derive a security scheme from, so this profile is captured from the docs.
+  By default the gateway trusts its network boundary (no auth). Operators can
+  optionally enable authentication so clients access models without sharing the
+  underlying provider API keys. Because the gateway exposes an OpenAI-compatible
+  surface (POST /openai/v1/chat/completions), clients authenticate the same way
+  they would with OpenAI — a bearer token in the Authorization header — while
+  the gateway holds the real upstream provider credentials.
+summary:
+  types: [http, apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+  - name: bearerToken
+    type: http
+    scheme: bearer
+    in: header
+    parameter: Authorization
+    description: >-
+      Optional client credential presented to the gateway (OpenAI-compatible
+      Authorization: Bearer <token>). Enforced only when the operator sets up
+      auth; disabled by default.
+    sources: [docs]
+  - name: providerApiKeys
+    type: apiKey
+    in: header
+    description: >-
+      Upstream LLM-provider API keys (Anthropic, OpenAI, AWS Bedrock, Azure,
+      GCP Vertex, Mistral, etc.) configured on the gateway via environment /
+      configuration, never exposed to clients.
+    sources: [docs]

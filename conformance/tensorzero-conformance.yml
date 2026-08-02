@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/tensorzero/tensorzero
+notes: >-
+  Cross-cutting standards posture for the TensorZero Gateway, from the docs +
+  README. TensorZero's marquee interoperability claim is an OpenAI-compatible
+  HTTP surface (works with the OpenAI SDK for Python/Node/Go). It also emits
+  OpenTelemetry. There is no published compliance program (no SOC 2 / ISO 27001
+  / HIPAA), consistent with a self-hosted, now-unmaintained open-source project,
+  so NO `Compliance` pointer is emitted.
+standards:
+  - id: openai-compatible
+    conforms: true
+    evidence: >-
+      Gateway exposes /openai/v1/chat/completions and works with the OpenAI SDK
+      and any OpenAI-compatible client.
+  - id: opentelemetry
+    conforms: true
+    evidence: README states it "plays nicely with OpenTelemetry".
+  - id: oauth2
+    conforms: false
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors follow the OpenAI error envelope, not application/problem+json.

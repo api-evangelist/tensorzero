@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/pypi/tensorzero/json
+notes: >-
+  TensorZero is an open-source, self-hosted LLMOps platform. Its first-party
+  client library is the Python client on PyPI (package name `tensorzero`,
+  version 2026.6.0 as of this pass). The gateway itself is distributed as a
+  Docker container rather than a language package. The `tensorzero` names on
+  crates.io and npm are placeholder/reserved (version 0.0.0, generic
+  description) and are NOT treated as official client libraries. The gateway is
+  also OpenAI-compatible, so any OpenAI SDK (Python/Node/Go) works against it —
+  those are third-party and not listed here.
+packages:
+  - language: python
+    registry: pypi
+    name: tensorzero
+    url: https://pypi.org/project/tensorzero/
+    install: pip install tensorzero
+    version: 2026.6.0
+    official: true
+    description: The Python client for TensorZero (embedded + HTTP gateway client).
+    repository: https://github.com/tensorzero/tensorzero
