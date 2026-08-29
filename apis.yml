@@ -15,6 +15,17 @@ description: >-
   GitHub (all org repositories archived) and the final Python client (2026.6.0)
   is on PyPI, but the hosted product has wound down.
 url: https://raw.githubusercontent.com/api-evangelist/tensorzero/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
