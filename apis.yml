@@ -57,7 +57,7 @@ tags:
 - AI Gateway
 - Inference
 - Observability
-- Open-Source
+- Open Source
 - Model Routing
 tags_raw:
 - Company
@@ -69,6 +69,7 @@ tags_raw:
 - Observability
 - Open Source
 - Model Routing
+- Open-Source
 apis: []
 maintainers:
 - FN: Kin Lane
